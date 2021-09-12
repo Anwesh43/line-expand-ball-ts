@@ -58,8 +58,8 @@ class DrawingUtil {
             context.save()
             context.scale(1 - 2 * j, 1)
             context.translate(0, h / 2 * (1 - 2 * j) * sc4)
-            context.rotate(deg * sc3)
-            DrawingUtil.drawLine(context, 0, 0, 0, size * sc1)
+            context.rotate(deg * sc3 * (1 - 2 * j))
+            DrawingUtil.drawLine(context, 0, 0, size * sc1, 0)
             DrawingUtil.drawClippedCircle(context, size + r, 0, r, sc2)
             context.restore()
         }
